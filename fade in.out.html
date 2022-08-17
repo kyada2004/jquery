@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>FadeInFadeOutDemo</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$("#BtnFadeOut").attr("disabled",true);
+			
+				$("#BtnFadeIn").click(function(){
+					if(confirm("Are You Sure..??"))
+					{
+						$("#MyDiv1").fadeIn(1000);
+						$("#MyDiv2").fadeIn(2000);
+						$("#MyDiv3").fadeIn(3000);
+						$("#BtnFadeOut").attr("disabled",false);
+						$(this).attr("disabled",true);
+					}
+				});
+				$("#BtnFadeOut").click(function(){
+					if(confirm("Are You Sure..??"))
+					{
+						$("#MyDiv1").fadeOut(1000);
+						$("#MyDiv2").fadeOut(2000);
+						$("#MyDiv3").fadeOut(3000);
+						$("#BtnFadeIn").attr("disabled",false);
+						$(this).attr("disabled",true);
+					}
+				});
+				$("#BtnFadeToggle").click(function(){
+					if(confirm("Are You Sure..??"))
+					{
+						$("#MyDiv1").fadeToggle(1000);
+						$("#MyDiv2").fadeToggle(2000);
+						$("#MyDiv3").fadeToggle(3000);
+					}
+				});
+			});
+		</script>
+        <style>
+            img{
+                display: none;
+            }
+        </style>
+		
+	</head>
+	<body>
+		<button id="BtnFadeIn">Click Me For Fade In</button>&nbsp;&nbsp;<button id="BtnFadeOut">Click Me For Fade Out</button>&nbsp;&nbsp;<button id="BtnFadeToggle">Click Me For Fade In / Out Toggle</button>
+		<div><img id="MyDiv1" src="pexels-sami-aksu-13010671.jpg" alt=""></div><br />
+		<div ><img id="MyDiv2" src="pexels-tobias-bjørkli-8230825.jpg" alt=""></div><br />
+		<div ><img id="MyDiv3" src="pexels-nati-12991635.jpg" alt=""></div><br />
+	</body>
+
+</html>

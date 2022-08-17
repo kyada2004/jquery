@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img call back</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> jQuery(Selection).ready(function(){
+        jQuery("button").click(function(){
+            $("#img1").hide(function(){
+             alert("this is hidden to the images");
+
+            });
+
+
+        });
+
+    });
+    </script>
+</head>
+<body>
+   <h1>this is a img is a hidden.</h1> 
+  <img id="img1" src="pexels-carlos-escobar-7008379.jpg" alt="">
+   <br><br>
+   <button>hide</button>
+</body>
+</html>
